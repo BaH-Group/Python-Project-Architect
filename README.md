@@ -37,6 +37,50 @@ To install the extension globally from the repository:
 gemini extension install https://github.com/BaH-Group/python-project-architect.git
 ```
 
+## Commands
+
+All commands are namespaced under `python`.
+
+### Basic Scaffolder (`/python:basic`)
+The primary scaffolding command that offers:
+- **Main Script**: `main.py` with "Hello, World!".
+- **Environment**: `.env` file for secrets.
+- **Documentation**: Basic `README.md`.
+- **Git Ignore**: Standard `.gitignore`.
+
+### FastAPI Scaffolder (`/python:fastapi`)
+Scaffolds a professional FastAPI project structure:
+- **Modular Layout**: `app/api`, `app/models`, `app/schemas`.
+- **Optional Features**: Database, Docker, JWT Auth, and Pytest.
+
+### Telegram Bot Scaffolder (`/python:telegram_bot`)
+Scaffolds a robust bot using `python-telegram-bot`:
+- **Organized Structure**: `bot/handlers`, `bot/utils`.
+- **Optional Features**: Persistence, Webhooks, and Databases.
+
+## Usage
+
+Once installed, use these commands in your chat:
+
+```text
+/python:basic
+/python:fastapi
+/python:telegram_bot
+```
+
+## Project Structure
+
+```
+.
+├── commands/
+│   └── python/
+│       ├── basic.toml         # Basic scaffolding
+│       ├── fastapi.toml       # FastAPI scaffolding
+│       └── telegram_bot.toml  # Telegram Bot scaffolding
+├── gemini-extension.json      # Extension manifest
+└── README.md                  # Documentation
+```
+
 ## Update
 
 To update the extension to the latest version, use:

@@ -1,0 +1,35 @@
+description = "Scaffolds a modern FastAPI project structure with best practices (routers, schemas, dependencies)."
+prompt = """
+Role: FastAPI Project Architect.
+
+1. **Ask the user**: 
+
+Use the `ask_user` tool to confirm the FastAPI project setup.
+- `type`: "choice"
+- `multiSelect`: true
+- `question`: "Which FastAPI features should I include?"
+- `header`: "FastAPI Setup"
+- `options`:
+  - Label: "Database", Description: "Add SQLAlchemy and a database connection template."
+  - Label: "Docker", Description: "Add a Dockerfile and docker-compose.yml."
+  - Label: "Auth", Description: "Add a basic JWT authentication scaffolding."
+  - Label: "Tests", Description: "Add a 'tests/' directory with a sample pytest configuration."
+
+Wait for the response.
+
+2. **File Structure**: Create the following directory structure:
+- `app/`
+  - `__init__.py`
+  - `main.py` (FastAPI app initialization)
+  - `api/` (Routers)
+  - `core/` (Config and security)
+  - `models/` (Database models)
+  - `schemas/` (Pydantic models)
+- `requirements.txt` (fastapi, uvicorn, pydantic-settings)
+- `.env` (Environment variables)
+
+3. **Environment Setup**:
+- Create virtual environment `venv`.
+- Install dependencies from `requirements.txt`.
+- Provide a summary of how to run the app using `uvicorn app.main:app --reload`.
+"""
