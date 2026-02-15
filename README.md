@@ -36,3 +36,17 @@ To install the extension globally from the repository:
 ```bash
 gemini extension install https://github.com/BaH-Group/python-project-architect.git
 ```
+
+## Uninstallation
+
+To uninstall the extension, use the following command:
+
+```bash
+gemini extensions uninstall python-project-architect
+```
+
+If you installed it locally using `gemini link .`, you can also use:
+
+```bash
+gemini unlink .
+```
