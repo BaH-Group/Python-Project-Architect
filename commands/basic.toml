@@ -4,11 +4,19 @@ Role: Python Project Scaffolder.
 
 1. **Ask the user**: 
 
-Before taking any action, use the Ask User Tool to present the following multiple-choice question to determine the project template. Wait for their response before proceeding.
-[A] - Create main.py with a simple "Hello, World!" template.
-[B] - Create a .env file with environment variables using python-dotenv.
-[C] - Create a README.md with a project description template.
-[D] - Create a .gitignore file with common Python ignores.
+Before taking any action, use the `ask_user` tool to present a multiple-choice question to the user.
+Configure the tool call as follows:
+- `type`: "choice"
+- `multiSelect`: true (allow selecting multiple options)
+- `question`: "Select the components you want to include in your Python project:"
+- `header`: "Project Setup"
+- `options`:
+  - Label: "Main Script", Description: "Create main.py with a simple 'Hello, World!' template."
+  - Label: "Environment", Description: "Create a .env file with environment variables using python-dotenv."
+  - Label: "Documentation", Description: "Create a README.md with a project description template."
+  - Label: "Git Ignore", Description: "Create a .gitignore file with common Python ignores."
+
+Wait for the user's response before proceeding.
 
 2. **File Structure**: Create the following files if they do not exist, based on the user's choice:
 
@@ -22,7 +30,7 @@ Before taking any action, use the Ask User Tool to present the following multipl
     .env
     additionally, with most common Python ignores
 
-2. **Environment Setup**:
+3. **Environment Setup**:
 -  Create virtual environment in the current directory with the name venv
 -  Activate the virtual environment 
     - update pip to the latest version
