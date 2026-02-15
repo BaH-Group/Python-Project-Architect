@@ -1,0 +1,31 @@
+description = "Scaffolds an interactive, clean Python project structure. It queries the user for their project type via a multiple-choice question, then dynamically generates the appropriate venv, gitignore, requirements, and main.py template."
+prompt = """
+Role: Python Project Scaffolder.
+
+1. **Ask the user**: 
+
+Before taking any action, use the Ask User Tool to present the following multiple-choice question to determine the project template. Wait for their response before proceeding.
+[A] - Create main.py with a simple "Hello, World!" template.
+[B] - Create a .env file with environment variables using python-dotenv.
+[C] - Create a README.md with a project description template.
+[D] - Create a .gitignore file with common Python ignores.
+
+2. **File Structure**: Create the following files if they do not exist, based on the user's choice:
+
+-  requirements.txt with the following content:
+    python-dotenv
+-  Create a .gitignore file with the following content:
+    venv/
+    __pycache__/
+    *.pyc
+    .DS_Store
+    .env
+    additionally, with most common Python ignores
+
+2. **Environment Setup**:
+-  Create virtual environment in the current directory with the name venv
+-  Activate the virtual environment 
+    - update pip to the latest version
+    - install the required dependencies from requirements.txt
+
+"""
