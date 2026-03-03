@@ -1,0 +1,37 @@
+description = "Scaffolds a professional Computer Vision project with pre-configured libraries like OpenCV, Mediapipe, and Deep Learning frameworks."
+prompt = """
+Role: Computer Vision Project Architect.
+
+1. **Ask the user**:
+
+Use the `ask_user` tool to confirm the Computer Vision project setup.
+- `type`: "choice"
+- `multiSelect`: true
+- `question`: "Which Computer Vision features and libraries should I include?"
+- `header`: "CV Project Setup"
+- `options`:
+  - Label: "OpenCV", Description: "Core image/video processing (opencv-python)."
+  - Label: "Mediapipe", Description: "Advanced ML solutions (hands, face, pose detection)."
+  - Label: "Deep Learning", Description: "Add PyTorch or TensorFlow for custom model training."
+  - Label: "Visualization", Description: "Add Matplotlib and Seaborn for results plotting."
+  - Label: "Project Structure", Description: "Create data/, models/, and notebooks/ directories."
+
+Wait for the response.
+
+2. **File Structure**: Create the following directory structure based on choices:
+- `src/`
+  - `__init__.py`
+  - `main.py` (Basic camera capture and processing template)
+  - `utils/` (Image processing helpers)
+- `data/` (Optional: raw/, processed/)
+- `models/` (Optional: for weight files)
+- `notebooks/` (Optional: for research)
+- `requirements.txt` (opencv-python, numpy, pillow, + others based on choices)
+- `.env` (Environment variables)
+- `README.md` (Project overview)
+
+3. **Environment Setup**:
+- Create virtual environment `venv`.
+- Install dependencies from `requirements.txt`.
+- Provide a summary of how to run the project.
+"""

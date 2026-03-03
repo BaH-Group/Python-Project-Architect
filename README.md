@@ -58,6 +58,12 @@ Scaffolds a robust bot using `python-telegram-bot`:
 - **Organized Structure**: `bot/handlers`, `bot/utils`.
 - **Optional Features**: Persistence, Webhooks, and Databases.
 
+### Computer Vision Scaffolder (`/python:computer_vision`)
+Scaffolds a professional Computer Vision project:
+- **Core Libraries**: OpenCV, Mediapipe, and Pillow.
+- **Project Layout**: `src/`, `data/`, `models/`, and `notebooks/`.
+- **Advanced Features**: Integration with PyTorch/TensorFlow and visualization tools.
+
 ## Usage
 
 Once installed, use these commands in your chat:
@@ -66,6 +72,7 @@ Once installed, use these commands in your chat:
 /python:basic
 /python:fastapi
 /python:telegram_bot
+/python:computer_vision
 ```
 
 ## Project Structure
@@ -74,11 +81,12 @@ Once installed, use these commands in your chat:
 .
 ├── commands/
 │   └── python/
-│       ├── basic.toml         # Basic scaffolding
-│       ├── fastapi.toml       # FastAPI scaffolding
-│       └── telegram_bot.toml  # Telegram Bot scaffolding
-├── gemini-extension.json      # Extension manifest
-└── README.md                  # Documentation
+│       ├── basic.toml           # Basic scaffolding
+│       ├── fastapi.toml         # FastAPI scaffolding
+│       ├── telegram_bot.toml    # Telegram Bot scaffolding
+│       └── computer_vision.toml # Computer Vision scaffolding
+├── gemini-extension.json        # Extension manifest
+└── README.md                    # Documentation
 ```
 
 ## Update
