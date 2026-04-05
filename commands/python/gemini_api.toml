@@ -10,6 +10,7 @@ Use the `ask_user` tool to confirm the Gemini API project setup.
 - `question`: "Which Gemini API features should I include?"
 - `header`: "Gemini API Setup"
 - `options`:
+  - Label: "Basic API Integration", Description: "Set up a basic Gemini API client and example usage."
   - Label: "Streamlit", Description: "Add a Streamlit UI for an interactive chat experience."
   - Label: "Multimodal", Description: "Add support for image/audio input and specialized prompt templates."
   - Label: "LangChain", Description: "Integrate LangChain for building complex AI chains and memory."
@@ -21,8 +22,25 @@ Wait for the response.
 - `app/`
   - `__init__.py`
   - `main.py` (Gemini API initialization and logic)
+  ```
+  import os
+  from dotenv import load_dotenv
+  from google import genai
+
+  load_dotenv()
+
+  api_key = os.getenv("GOOGLE_API_KEY")
+
+  client = genai.Client(api_key=api_key)
+```
   - `utils/` (Helper functions for file processing and prompt engineering)
-- `requirements.txt` (google-generativeai, python-dotenv, streamlit if chosen, langchain if chosen)
+- Create  `requirements.txt` with following dependencies:
+  - python-dotenv
+  - google-genai
+  - pydantic
+  - Options based on user selection
+    
+
 - `.env` (Include a placeholder for GOOGLE_API_KEY)
 - `README.md` (Instructions on how to get an API key and run the app)
 
@@ -31,3 +49,4 @@ Wait for the response.
 - Install dependencies from `requirements.txt`.
 - Provide a summary of how to run the app.
 """
+
