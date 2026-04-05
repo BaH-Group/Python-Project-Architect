@@ -64,6 +64,12 @@ Scaffolds a professional Computer Vision project:
 - **Project Layout**: `src/`, `data/`, `models/`, and `notebooks/`.
 - **Advanced Features**: Integration with PyTorch/TensorFlow and visualization tools.
 
+### Gemini API Scaffolder (`/python:gemini_api`)
+Scaffolds a professional AI project structure using the Google Gemini API:
+- **Core Library**: `google-generativeai`.
+- **UI Options**: Streamlit for quick, interactive demos.
+- **Advanced Features**: Multimodal support, LangChain integration, and API response caching.
+
 ## Usage
 
 Once installed, use these commands in your chat:
@@ -73,6 +79,7 @@ Once installed, use these commands in your chat:
 /python:fastapi
 /python:telegram_bot
 /python:computer_vision
+/python:gemini_api
 ```
 
 ## Project Structure
@@ -84,7 +91,8 @@ Once installed, use these commands in your chat:
 │       ├── basic.toml           # Basic scaffolding
 │       ├── fastapi.toml         # FastAPI scaffolding
 │       ├── telegram_bot.toml    # Telegram Bot scaffolding
-│       └── computer_vision.toml # Computer Vision scaffolding
+│       ├── computer_vision.toml # Computer Vision scaffolding
+│       └── gemini_api.toml      # Gemini API scaffolding
 ├── gemini-extension.json        # Extension manifest
 └── README.md                    # Documentation
 ```
